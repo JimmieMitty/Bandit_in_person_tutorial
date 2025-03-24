@@ -12,7 +12,7 @@ class BanditTutorial:
         while not rospy.is_shutdown:
             self.current_twist.linear.x = 0
             self.current_twist.linear.y = 0
-            self.current_twist.linear.z = 0
+            self.current_twist.linear.z = -0.3
             self.movebase.publish(self.current_twist)
 
 if __name__ == "__main__":

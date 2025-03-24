@@ -30,7 +30,7 @@ RUN sudo apt install -y git
 # Rosdep update
 RUN rosdep update
 
-RUN apt-get install -y rsync
+RUN sudo apt-get install -y rsync
 
 # Source the ROS setup file
 RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
