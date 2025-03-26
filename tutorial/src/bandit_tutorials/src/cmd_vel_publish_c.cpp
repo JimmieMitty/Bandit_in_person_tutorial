@@ -1,34 +1,29 @@
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
 
-class BanditTutorial {
-public:
-    BanditTutorial() {
-        movebase = nh.advertise<geometry_msgs::Twist>("/mobile_base_controller/cmd_vel", 1);
-    }
+ros::Publisher movebase;
+ros::Rate* rate;
 
-    void publishVelocityLoop() {
-        ros::Rate rate(10); // Adjust loop rate as necessary
-        while (ros::ok()) {
-            geometry_msgs::Twist current_twist;
-            current_twist.linear.x = 0;
-            current_twist.linear.y = 0;
-            current_twist.linear.z = 0;
-            movebase.publish(current_twist);
-            rate.sleep();
-        }
+void publishVelocityLoop() {
+    while (ros::ok()) {
+        geometry_msgs::Twist current_twist;
+        current_twist.linear.x = 0; // move forward and back
+        current_twist.linear.y = 0; // move left to right
+        current_twist.angular.z = 1.0;
+        movebase.publish(current_twist);
+        rate->sleep();
     }
-
-private:
-    ros::NodeHandle nh;
-    ros::Publisher movebase;
-};
+}
 
 int main(int argc, char** argv) {
     ros::init(argc, argv, "movecontroller");
+    ros::NodeHandle nh;
     
-    BanditTutorial client;
-    client.publishVelocityLoop();
+    movebase = nh.advertise<geometry_msgs::Twist>("/mobile_base_controller/cmd_vel", 1);
+    rate = new ros::Rate(10); // 10Hz
     
+    publishVelocityLoop();
+    
+    delete rate;
     return 0;
 }
