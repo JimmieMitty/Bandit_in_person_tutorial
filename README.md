@@ -75,3 +75,12 @@ In this example, we'll run the Python file `cmd_vel_publish.py`. Follow these in
     ```bash
     rosrun bandit_tutorials cmd_vel_publish.py
     ```
+
+## Extra Documentation and Tiago Tour Guide Project
+Congratulations on your progress!  
+All documentation for Tiago is listed in the repo under Documentation. The repo for the "Tiago Tour Guide project" is listed below.
+Source code is available here:  
+[Bandit in Person Tutorial Repository](https://github.com/JimmieMitty/Bandit_in_person_tutorial)  
+
+If you wish to see the documentation provided by Pal Robotics, please follow this link:  
+[Pal Robotics SDK Documentation](https://docs.pal-robotics.com/sdk/23.12/)
