@@ -85,3 +85,6 @@ Source code is available here:
 
 If you wish to see the documentation provided by Pal Robotics, please follow this link:  
 [Pal Robotics SDK Documentation](https://docs.pal-robotics.com/sdk/23.12/)
+
+Please check out this repo's wiki!!! it's got some useful stuff:  
+[Bandit Tutorial Wiki](https://github.com/JimmieMitty/Bandit_in_person_tutorial/wiki)
