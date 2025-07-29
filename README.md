@@ -61,7 +61,7 @@ In this example, we'll run the Python file `cmd_vel_publish.py`. Follow these in
     ```
 3. Navigate to the directory:  
     ```bash
-    cd /Tutorials/tutorial
+    cd /tutorials/tutorial
     ```
 4. Build your files (especially if using C++):  
     ```bash
