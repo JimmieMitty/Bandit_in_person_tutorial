@@ -65,6 +65,7 @@ In this example, we'll run the Python file `cmd_vel_publish.py`. Follow these in
     ```
 4. Build your files (especially if using C++):  
     ```bash
+    source /opt/ros/noetic/setup.bash
     catkin_make
     ```
 5. Source your built files:  
